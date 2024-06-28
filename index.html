@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Search Box</title>
+	<style>
+		body{
+			background: black;
+		}
+		
+		#ss{
+			box-shadow: 0 0 50px 15px #e05f48;
+		}
+		.search-container {
+			
+
+			width: 80vw;
+			height: 40vh;
+			margin: 10vw;
+
+			padding: 20px;
+			background-color: #f2f2f2;
+			border: 1px solid #3f3b3b;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.search-container input[type="text"] {
+			width: 60vw;
+			height: 3vh;
+			margin: vw;
+			padding: 10px;
+			font-size: 40px;
+			border: 1px solid #ccc;
+		}
+
+		button {
+			width: 25%;
+			padding: 10px;
+			font-size: 45px;
+			background-color: #3e3d3d;
+			color: #f9f3f3;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+
+		.search-container button[type="button"]:hover {
+			background-color: #03A96D;
+		}
+
+		#result-container {
+			margin-top: 20px;
+		}
+
+		#result-container p {
+			margin-bottom: 10px;
+		}
+		p{
+			font-size: 50px;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="ss" class="search-container"><br><br>
+		<input type="text" id="search-box" placeholder="Search..."><br><br>
+		<button id="search-btn">Search</button>
+		<div id="result-container"></div>
+	</div>
+
+	<script>
+		document.getElementById("search-btn").addEventListener("click", function () {
+			var resultContainer = document.getElementById("result-container");
+			resultContainer.innerHTML = "";
+
+
+			var paragraph = document.createElement("p");
+			paragraph.textContent = "Soo Elegant🌎 Soo beautifull🥰 just looks perfect ❤️";
+
+			
+			resultContainer.appendChild(paragraph);
+
+		});
+	</script>
+</body>
+
+</html>
